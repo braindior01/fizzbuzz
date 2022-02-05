@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fizzBuzz</title>
+</head>
+<style>
+    div {
+        border-bottom: solid black;
+        width: 500px;
+        padding-bottom: 20px;
+    }
+</style>
+<body>
+    <h1>Get a FizzBuzz Result!</h1>
+    <div>
+        <p><strong>Type a number:</strong></p>
+        <input type="text" id="test">
+        <input type="submit" id="clik" value="Click here!">
+        
+    </div>
+
+    <p id="Hasil"></p>
+       
+    <script>
+       const input = document.getElementById('clik');
+       input.addEventListener('click', function() {
+           let i = document.getElementById('test').value;
+           if ( i % 15 === 0) {
+               document.getElementById('Hasil').innerHTML += "FizzBuzz<br>";
+           } else if ( i % 3 === 0) {
+               document.getElementById('Hasil').innerHTML += "Fizz<br>";
+           } else if ( i % 5 === 0) {
+               document.getElementById('Hasil').innerHTML += "Buzz<br>";
+           } else {
+               document.getElementById('Hasil').innerHTML += "invalid input<br>";
+           }
+
+       });
+    </script>
+
+</body>
+</html>
